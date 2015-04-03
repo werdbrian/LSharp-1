@@ -18,9 +18,9 @@ namespace URF_Spell_Spammer
         {
             Game.PrintChat("URF Spell Spammer Loaded");
             Menu = new Menu("URF Spell Spammer", "URF Spell Spammer", true);
-            Menu.AddItem(new MenuItem("Q", "Q").SetValue(false));
-            Menu.AddItem(new MenuItem("W", "W").SetValue(false));
-            Menu.AddItem(new MenuItem("E", "E").SetValue(false));
+            Menu.AddItem(new MenuItem("Q", "Q").SetValue(new KeyBind('A', KeyBindType.Toggle,false)));
+            Menu.AddItem(new MenuItem("W", "W").SetValue(new KeyBind('S', KeyBindType.Toggle, false)));
+            Menu.AddItem(new MenuItem("E", "E").SetValue(new KeyBind('G', KeyBindType.Toggle, false)));
             Menu.AddToMainMenu();
             Game.OnUpdate += Game_OnGameUpdate;
         }
@@ -29,7 +29,7 @@ namespace URF_Spell_Spammer
         {
             try
             {
-                if (Menu.Item("Q").GetValue<bool>())
+                if (Menu.Item("Q").GetValue<KeyBind>().Active)
                 {
                     if (Player.Spellbook.CanUseSpell(SpellSlot.Q) == SpellState.Ready &&
                         Player.Spellbook.GetSpell(SpellSlot.Q).Level > 0 && !Player.IsRecalling() && !Player.IsChannelingImportantSpell())
@@ -37,7 +37,7 @@ namespace URF_Spell_Spammer
                         Player.Spellbook.CastSpell(SpellSlot.Q);
                     }
                 }
-                if (Menu.Item("W").GetValue<bool>())
+                if (Menu.Item("W").GetValue<KeyBind>().Active)
                 {
                     if (Player.Spellbook.CanUseSpell(SpellSlot.W) == SpellState.Ready &&
                         Player.Spellbook.GetSpell(SpellSlot.W).Level > 0 && !Player.IsRecalling() && !Player.IsChannelingImportantSpell())
@@ -45,7 +45,7 @@ namespace URF_Spell_Spammer
                         Player.Spellbook.CastSpell(SpellSlot.W);
                     }
                 }
-                if (Menu.Item("E").GetValue<bool>())
+                if (Menu.Item("E").GetValue<KeyBind>().Active)
                 {
                     if (Player.Spellbook.CanUseSpell(SpellSlot.E) == SpellState.Ready &&
                         Player.Spellbook.GetSpell(SpellSlot.E).Level > 0 && !Player.IsRecalling() && !Player.IsChannelingImportantSpell())
