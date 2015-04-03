@@ -32,7 +32,7 @@ namespace URF_Spell_Spammer
                 if (Menu.Item("Q").GetValue<bool>())
                 {
                     if (Player.Spellbook.CanUseSpell(SpellSlot.Q) == SpellState.Ready &&
-                        Player.Spellbook.GetSpell(SpellSlot.Q).Level > 0)
+                        Player.Spellbook.GetSpell(SpellSlot.Q).Level > 0 && !Player.IsRecalling())
                     {
                         Player.Spellbook.CastSpell(SpellSlot.Q);
                     }
@@ -40,7 +40,7 @@ namespace URF_Spell_Spammer
                 if (Menu.Item("W").GetValue<bool>())
                 {
                     if (Player.Spellbook.CanUseSpell(SpellSlot.W) == SpellState.Ready &&
-                        Player.Spellbook.GetSpell(SpellSlot.W).Level > 0)
+                        Player.Spellbook.GetSpell(SpellSlot.W).Level > 0 && !Player.IsRecalling())
                     {
                         Player.Spellbook.CastSpell(SpellSlot.W);
                     }
@@ -48,7 +48,7 @@ namespace URF_Spell_Spammer
                 if (Menu.Item("E").GetValue<bool>())
                 {
                     if (Player.Spellbook.CanUseSpell(SpellSlot.E) == SpellState.Ready &&
-                        Player.Spellbook.GetSpell(SpellSlot.E).Level > 0)
+                        Player.Spellbook.GetSpell(SpellSlot.E).Level > 0 && !Player.IsRecalling())
                     {
                         Player.Spellbook.CastSpell(SpellSlot.E);
                     }
