@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{93F1AF21-9F6A-4834-8A1F-CC051B78E588}</ProjectGuid>
+    <ProjectGuid>{42546CA3-0101-4845-BBAE-75F64289AED2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JeonJunglePlay</RootNamespace>
-    <AssemblyName>JeonJunglePlay</AssemblyName>
+    <RootNamespace>Sophies_Soraka</RootNamespace>
+    <AssemblyName>SophiesSoraka</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PreBuildEvent />
@@ -34,61 +34,38 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GreyMagic">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\GreyMagic.dll</HintPath>
-    </Reference>
-    <Reference Include="IronPython">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\IronPython.dll</HintPath>
-    </Reference>
-    <Reference Include="LeaguePackets">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\LeaguePackets.exe</HintPath>
-    </Reference>
-    <Reference Include="LeagueSharp">
+    <Reference Include="LeagueSharp, Version=1.0.0.25, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\LeagueSharp.dll</HintPath>
     </Reference>
     <Reference Include="LeagueSharp.Common">
       <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\LeagueSharp.Common.dll</HintPath>
     </Reference>
-    <Reference Include="LeagueSharp.Sandbox">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\LeagueSharp.Sandbox.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Scripting">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\Microsoft.Scripting.dll</HintPath>
-    </Reference>
-    <Reference Include="RemoteASM">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\RemoteASM.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpDX">
+    <Reference Include="SharpDX, Version=2.6.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\SharpDX.dll</HintPath>
     </Reference>
-    <Reference Include="SharpDX.Direct3D9">
+    <Reference Include="SharpDX.Direct3D9, Version=2.6.2.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\SharpDX.Direct3D9.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\System.Data.SQLite.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tripper.RecastManaged">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\Tripper.RecastManaged.dll</HintPath>
-    </Reference>
-    <Reference Include="Tripper.Tools">
-      <HintPath>C:\Users\Power\Downloads\LeagueSharp\System\Tripper.Tools.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CaptureLib.cs" />
-    <Compile Include="JeonItem.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Readini.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

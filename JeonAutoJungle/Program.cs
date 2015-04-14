@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.IO;
 using LeagueSharp;
 using LeagueSharp.Common;
+using LeagueSharp.Sandbox;
 using SharpDX;
 
 namespace JeonJunglePlay
@@ -591,7 +592,7 @@ namespace JeonJunglePlay
         {
             ////////////////////customizing//////////////////
             
-            var dir = new DirectoryInfo(Config.LeagueSharpDirectory.ToString() + @"\JeonAutoJungle");
+            var dir = new DirectoryInfo(SandboxConfig.DataDirectory + @"\JeonAutoJungle");
             var setFile = new FileInfo(dir + "/" + Player.ChampionName + ".ini");
 
             #region File Stream
